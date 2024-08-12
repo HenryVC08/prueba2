@@ -1,0 +1,125 @@
+<head th:fragment="cabecera">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extranet-Limatambo</title>
+    <link rel="stylesheet" th:href="@{/css/normalize.css}">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+    <script src="https://kit.fontawesome.com/2fe26d48d2.js" crossorigin="anonymous"></script>
+</head>
+<!-- *************************************************************************** -->
+
+<nav class="menu" th:fragment="navegador">
+    <section class="menu__container">
+
+        <div class="menu__logo">
+            <a href="#" class="menu__logo--img"><img th:src="@{/img/header/Recurso-4.png}" alt="" class="logo"></a>
+        </div>
+
+        <ul class="menu__links"> 
+
+            <li class="menu__item menu__item--show">
+                <a href="#" class="menu__link">Vidrios de Seguridad <img th:src="@{/img/header/row-down.svg}" alt="" class="row--down"> </a>
+
+                <ul class="menu__nesting">
+                    <li class="menu__inside">
+                        <a href="#" class="menu__link menu__link--inside">Vidrios Templados</a>
+                    </li>
+                    <li class="menu__inside">
+                        <a href="#" class="menu__link menu__link--inside">Vidrios Laminados</a>
+                    </li>
+                    <li class="menu__inside">
+                        <a href="#" class="menu__link menu__link--inside">Espejos</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu__item">
+                <a href="#" class="menu__link">Aluminos</a>
+            </li>
+
+            <li class="menu__item menu__item--show">
+                <a href="#" class="menu__link">Accesorios <img th:src="@{/img/header/row-down.svg}" alt="" class="row--down"></a>
+
+                <ul class="menu__nesting">
+                    <li class="menu__inside">
+                        <a href="#" class="menu__link menu__link--inside">Policarbonato</a>
+                    </li>
+                    <li class="menu__inside">
+                        <a href="#" class="menu__link menu__link--inside">Polietileno Acrílico</a>
+                    </li>
+                    <li class="menu__inside">
+                        <a href="#" class="menu__link menu__link--inside">Panel de Aluminio</a>
+                    </li>
+                    <li class="menu__inside">
+                        <a href="#" class="menu__link menu__link--inside">Blocks de Vidrio</a>
+                    </li>
+                    <li class="menu__inside">
+                        <a href="#" class="menu__link menu__link--inside">Baldosas</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu__item">
+                <a href="#" class="menu__link">Proyectos</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Blog</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Trabaja con Nosotros</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link menu__link--red">Contáctanos</a>
+            </li>
+
+        </ul>
+
+
+         <div class="menu__hamburguer">
+            <img src="assets/menu.svg" alt="" class="menu__img">
+        </div> 
+
+    </section>
+</nav>
+
+
+
+<!-- *************************************************************************** -->
+<section class="container" th:fragment="login">
+        
+    <div class="container__dual">
+        <div class="form__container-left">
+            <form  class="form__container__form" method="POST">
+                <h2 class="form__text-title">Inicio de Sesión</h2>
+
+                <div class="form__input">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="user"   required>
+                    <label for="user">Usuario</label>
+                </div>
+                <div class="form__input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" required>
+                    <label for="">Contraseña</label>
+                </div>
+
+                <div class="form__text">
+                    <h4 >Estimado Cliente: </h4>
+                    <p>Ud. puede consultar el estado de su cuenta a través de esta opción.
+                        Si todavía no tiene sus credenciales de acceso, solicitelo a su ejecutivo de venta.</p>
+                </div>
+
+                <div class="form__button" onclick="enviarDatos()">Ingresar</div>
+            </form>
+        </div>
+
+
+        <div class="form__container-rigth">
+            <img th:src="@{/img/body/imgLimatambo.jpg}" alt="">
+           
+        </div>
+
+    </div>
+
+    
+</section> 

@@ -1,0 +1,388 @@
+/* Fuentes */
+
+
+/* Estilo general  "NORMALIZE"*/
+/* Variables (colores de Empresa) */
+:root{
+    --principal: #e41d25;
+    
+    --contrast: #222222;
+    --contrast-2: #575760;
+    --contrast-3: #b2b2be;
+    --contrast-4:#000000;
+    --base: #f0f0f0;
+    --base-2: #f7f8f9;
+    --base-3: #ffffff;
+}
+
+/* Estilo Header */
+/* ************************************************************************************************ */
+
+.menu{
+    background-color: var(--base-3);
+    color: #fff;
+    height: 95px;
+    width: 100%;
+    margin: 0 auto;
+    top: 0;
+    position: fixed;
+    z-index: 99;
+}
+
+.menu__container{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 302px;
+    height: 73px;
+}
+.menu__logo--img{
+    width: 302px;
+    height: 73px;
+}
+
+.menu__links{
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+}
+
+.row--down{
+    width: 17px;
+    height: 17px;
+
+}
+
+.menu__item{
+
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+    /* background-color: #798499; */
+}
+
+.menu__item:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+    
+}
+
+.menu__link{
+    color: #575760;
+    text-decoration: none;
+    padding: 0 19px;
+    font-size: 15px;
+    font-weight: lighter;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 10px;
+}
+.menu__link--red{
+    color: var(--principal);
+}
+
+
+.menu__link:hover{
+    background-color: var(--base-3);
+    color: var(--contrast-3);
+}
+.menu__link--red:hover{
+    color: var(--principal);
+}
+
+
+.menu__nesting{
+    list-style: none;
+    transition:clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: var(--base-3);
+}
+
+.menu__link--inside{
+    padding: 11px 60px 11px 30px;
+}
+
+.menu__link--inside:hover{
+    background-color: var(--base-3);
+    color: var(--contrast-3);
+}
+
+.menu__hamburguer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu__img{
+    display: block;
+    width: 36px;
+}
+
+/* ******************************************************** */
+
+
+
+.row__red{
+    width: 100%;
+    height: 40px;
+    margin-top: 95px;
+    background-color: var(--principal);
+}
+.nav__links-red{
+    color: var(--principal);
+    text-decoration: none;
+}
+
+
+
+/* Estilo Body */
+
+body{
+    background-color: var(--base);
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    width: 100%;
+}
+.container__dual{
+    width: 900px;
+    display: flex;
+    flex-direction: row-reverse;
+    /* border: 1px solid #000; */
+    box-shadow: 0px 0px 14px -1px rgba(0,0,0,0.65);
+-webkit-box-shadow: 0px 0px 14px -1px rgba(0,0,0,0.65);
+-moz-box-shadow: 0px 0px 14px -1px rgba(0,0,0,0.65);
+}
+/* dual Login */
+.form__container-left{
+    position: relative;
+    width: 450px;
+    height: 500px;
+    background-color: var(--base-3);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form__container__form{
+    width: 80%;
+}
+
+.form__text-title{
+    font-size: 2em;
+    color:var(--principal);
+    text-align: center;
+    margin-bottom: 60px;
+}
+.form__input{
+    position: relative;
+    margin: 30px 0;
+    width: 360px;
+    border-bottom: 2px solid var(--contrast-3);
+    margin: 20px auto;
+
+}
+.form__input label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: var(--contrast);
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;
+}
+
+.form__input input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0px 5px;
+    color: var(--contrast-2);
+}
+.form__input i{
+    position: absolute;
+    right: 8px;
+    color: #000000;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.form__text{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form__text h4{
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.form__text p{
+    font-size: 0.8em;
+
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.form__button{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--principal);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--base-3);
+}
+/* Dual IMG */
+
+.form__container-rigth{
+    position: relative;
+    width: 450px;
+    height: 500px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+
+
+/* Estilo Footer */
+
+.footer__container{
+    width: 100%;
+    height: 285px;
+    background-color: var(--contrast-2);
+}
+
+/* ESTILO TITULO TABLA */
+
+.Estado_titulo{
+    margin-top: 50px;
+}
+
+/* ESTILOS DE TABLA */
+.tabla__container{
+    width: 100%;
+    margin: 50px auto;
+    position: relative;
+}
+
+.tabla__body{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tabla{
+    width: 100%;
+    /* border: 1px solid #000; */
+    border-collapse: collapse;
+}
+
+.tabla thead{
+    background-color: var(--principal);
+}
+
+.tabla thead tr th{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.35px;
+    color: var(--base-3);
+    opacity: 1;
+    padding: 12px;
+    vertical-align: top;
+    border: 1px solid #dee2e685;
+}
+
+.tabla tbody tr td{
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    font-weight: normal;
+    color: #000;
+    background-color: #fff;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #dee2e685;
+}
+
+
+@media (max-width:768px){
+    .tabla thead{
+        display: none;
+    }
+
+    .table, .tabla tbody, .tabla tr, .tabla td{
+        display: block;
+        width: 100%;
+    }
+    
+    .tabla tr{
+        margin-bottom: 15px;
+
+    }
+
+    .tabla tbody tr td{
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .tabla td:before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+
+    }
+
+}
